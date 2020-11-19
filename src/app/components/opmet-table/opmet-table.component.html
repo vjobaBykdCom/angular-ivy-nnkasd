@@ -1,0 +1,12 @@
+<ng-template transloco let-t>
+  <div *ngFor="let station of tableData">
+    <div class="stationName">{{ station.stationId }}</div>
+    <table>
+      <tr *ngFor="let typeData of station.types">
+        <td>{{ typeData.queryType }}</td>
+        <td>{{ typeData.time }}</td>
+        <td [innerHTML]="typeData.text"></td>
+      </tr>
+    </table>
+  </div>
+</ng-template>

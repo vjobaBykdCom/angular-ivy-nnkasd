@@ -1,0 +1,15 @@
+{
+  "messageType": "Message type",
+  "thisFieldIsRequired": "This field is required",
+  "airports": "Airports",
+  "countries": "Countries",
+  "separateWithSpace": "Please separate inputs with space",
+  "invalidFormat": "Invalid format",
+  "submit": "Create Briefing",
+  "requiredFieldMissing": "Airports or countries must be filled up",
+  "messageTypeList": {
+    "METAR": "METAR",
+    "TAF": "TAF",
+    "SIGMET": "SIGMET"
+  }
+}

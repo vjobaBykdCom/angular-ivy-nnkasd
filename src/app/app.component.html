@@ -1,4 +1,3 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+<app-opmet-input-form [loading]="loading" (data)="loadData($event)"></app-opmet-input-form>
+<app-opmet-table *ngIf="responseData$ | async" [data]="responseData$ | async"></app-opmet-table>

@@ -1,0 +1,15 @@
+{
+  "messageType": "Typ správy",
+  "thisFieldIsRequired": "Povinné pole",
+  "airports": "Letiská",
+  "countries": "štáty",
+  "separateWithSpace": "Prosím oddelte vstupy medzerou",
+  "invalidFormat": "Nesprávny formát",
+  "submit": "Prijať správy",
+  "requiredFieldMissing": "Letiská alebo štáty musia byť vyplnené",
+  "messageTypeList": {
+    "METAR": "METAR",
+    "TAF": "TAF",
+    "SIGMET": "SIGMET"
+  }
+}

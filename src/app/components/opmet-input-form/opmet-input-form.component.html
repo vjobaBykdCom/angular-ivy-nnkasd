@@ -1,0 +1,64 @@
+<ng-template transloco let-t>
+  <form [formGroup]="form" (submit)="submit()">
+    <mat-form-field>
+      <mat-label>{{ t("messageType") }}</mat-label>
+      <mat-select formControlName="messages" multiple>
+        <mat-option
+          *ngFor="let messageType of messageTypeList"
+          [value]="messageType.value"
+          >{{ t("messageTypeList." + messageType.message) }}</mat-option
+        >
+      </mat-select>
+      <mat-error *ngIf="form.controls.messages.hasError('required')">
+        {{ t("thisFieldIsRequired") }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ t("airports") }}</mat-label>
+      <input
+        name="airports"
+        type="text"
+        matInput
+        formControlName="airports"
+        (keyup)="toUpperCase($event)"
+      />
+      <mat-hint>{{ t("separateWithSpace") }}</mat-hint>
+
+      <mat-error *ngIf="form.controls.airports.hasError('required')">
+        {{ t("thisFieldIsRequired") }}
+      </mat-error>
+      <mat-error *ngIf="form.controls.airports.hasError('pattern')">
+        {{ t("invalidFormat") }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ t("countries") }}</mat-label>
+      <input
+        name="countries"
+        type="text"
+        matInput
+        formControlName="countries"
+        (keyup)="toUpperCase($event)"
+      />
+      <mat-hint>{{ t("separateWithSpace") }}</mat-hint>
+
+      <mat-error *ngIf="form.controls.countries.hasError('required')">
+        {{ t("thisFieldIsRequired") }}
+      </mat-error>
+      <mat-error *ngIf="form.controls.countries.hasError('pattern')">
+        {{ t("invalidFormat") }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-error *ngIf="form.hasError('requiredformfield') && submitted">
+      {{ t("requiredFieldMissing") }}
+    </mat-error>
+    <div class="buttonBox">
+      <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+        {{ t("submit") }}
+      </button>
+    </div>
+  </form>
+</ng-template>
