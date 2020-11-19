@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { OpmetResponse } from 'src/app/opmet-interface';
+import { OpmetResponse } from '../../opmet-interface';
 
 interface TableData {
   stationId: string;
